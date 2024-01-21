@@ -5,17 +5,20 @@ public class Main{
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
+        StringBuffer result = new StringBuffer();
+        
         int n = Integer.parseInt(bf.readLine());
         for(int i=1;i<=n;i++){
-            for(int j=n;j>=1;j--){
-                if(j <= i){
-                    bw.write("*");
-                }else{
-                    bw.write(" ");
-                }
+            for(int j=0;j<n-i;j++){
+                result.append(" ");
             }
-            bw.write("\n");
+            for(int j=0;j<i;j++){
+                result.append("*");
+            }
+            result.append("\n");
         }
+        
+        bw.write(result.toString());
         bw.close();  
     }
 }
