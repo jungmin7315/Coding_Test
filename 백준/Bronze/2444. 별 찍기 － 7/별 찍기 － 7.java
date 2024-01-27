@@ -7,24 +7,29 @@ public class Main{
         
         int n = Integer.parseInt(br.readLine());
         
-        for(int i=1;i<=2*n-1;i+=2){
-            for(int j=1;j<=(2*n-1)-i;j+=2){
+        for(int i=1;i<=n;i++){
+            //공백 출력
+            for(int j=1;j<=n-i;j++){
                 bw.write(" ");
             }
-            for(int k=1;k<=i;k++){
+            //홀수자리 *출력
+            for(int k=1;k<=i*2-1;k++){
                 bw.write("*");
             }
             bw.write("\n");
         }
-        for(int i=2*n-3;i>=1;i-=2){
-            for(int j=(2*n-1)-i;j>=1;j-=2){
+        for(int i=n-1;i>=1;i--){
+            //공백 출력
+            for(int j=n-i;j>=1;j--){
                 bw.write(" ");
             }
-            for(int k=i;k>=1;k--){
+            //홀수자리 *출력
+            for(int k=i*2-1;k>=1;k--){
                 bw.write("*");
             }
             bw.write("\n");
         }
+        //출력
         bw.flush();
         bw.close();
         br.close();
