@@ -7,20 +7,19 @@ public class Main{
         String[] arr = br.readLine().split(" ");
         int n = Integer.parseInt(arr[0]);//세로 크기
         int m = Integer.parseInt(arr[1]);//가로 크기
-        int[][] a = new int[n][m];//a 2차원 배열 선언
         int[][] sum = new int[n][m];//a+b 2차원 배열 선언
         //a의 2차원 배열에 값 넣어주기
         for(int i=0;i<n;i++){
             String[] arrA = br.readLine().split(" ");
             for(int j=0;j<m;j++){
-                a[i][j] = Integer.parseInt(arrA[j]);
+                sum[i][j] = Integer.parseInt(arrA[j]);
             }
         }
         //a+d의 결과 값 넣어주기
         for(int i=0;i<n;i++){
             String[] arrB = br.readLine().split(" ");
             for(int j=0;j<m;j++){
-                sum[i][j] = a[i][j] + Integer.parseInt(arrB[j]);
+                sum[i][j] = sum[i][j] + Integer.parseInt(arrB[j]);
             }
         }
         //출력
