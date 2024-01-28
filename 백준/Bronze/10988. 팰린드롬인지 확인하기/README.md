@@ -1,4 +1,4 @@
-# [Bronze III] 팰린드롬인지 확인하기 - 10988 
+# [Bronze III] 팰린드롬인지 확인하기 - 10988 1
 
 [문제 링크](https://www.acmicpc.net/problem/10988) 
 
