@@ -16,22 +16,19 @@ public class Main{
             al[alphabet[i] -'A'] += 1;
         }        
         int max = 0;     //최대값 변수
-        int count = 27;  //만약 중복값이 있을시 ?로 설정하기 위한 27초기값 
+        int count = -2;  //만약 중복값이 있을시 ?로 설정하기 위한 -2초기값 
         //최대값 구하기와 중복값이 있는지 없는지 체크하는 코드
         for(int i=0;i<al.length;i++){
             if(max < al[i]){
                 max = al[i];
                 count = i;
             }else if(max == al[i]){
-                count=27;
+                count=-2;
             }
         }
         //중복값이 있으면 ?를 출력 없으면 가장 많이 사용한 알파벳 출력
-        if(count != 27){
-            System.out.printf("%c",count+'A');
-        }else{
-            System.out.println("?");
-        }
+        System.out.printf("%c",count+'A');
+        
         
         br.close();
     }
