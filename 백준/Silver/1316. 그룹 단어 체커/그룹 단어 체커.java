@@ -5,7 +5,7 @@ public class Main{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
         int n = Integer.parseInt(br.readLine());
-        //카운트 배열
+        //카운트 변수
         int count=0;
         for(int i=0;i<n;i++){
             String input = br.readLine();
