@@ -5,14 +5,12 @@ public class Main{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         
-        String input;
         char[][] al = new char[5][15];
         //입력받은 글자들을 배열에 넣어주기
         for(int i=0;i<5;i++){
-            input = br.readLine();
-            char[] a = input.toCharArray();
+            String input = br.readLine();
             for(int j=0;j<input.length();j++){
-                al[i][j] = a[j];
+                al[i][j] = input.charAt(j);
             }
         }
         
