@@ -1,30 +1,33 @@
 import java.io.*;
+import java.util.*;
 
-public class Main{
-    public static void main(String[] args)throws IOException{
+public class Main {
+    public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        
-        int n = Integer.parseInt(br.readLine());
-        int[] arr = new int[n];
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        StringBuilder str = new StringBuilder();
+
+        int n[] = new int[Integer.parseInt(st.nextToken())];
+
         int tmp = 0;
-        for(int i=0;i<arr.length;i++){
-            arr[i] = Integer.parseInt(br.readLine());
+
+        for (int i = 0; i < n.length; i++) {
+            st = new StringTokenizer(br.readLine());
+            n[i] = Integer.parseInt(st.nextToken());
         }
-        //오름차순 정렬
-        for(int i=0;i<arr.length;i++){
-            for(int j=0;j<arr.length;j++){
-                if(arr[i] < arr[j]){
-                    tmp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = tmp;
+
+        for(int i = 0; i< n.length; i++){
+            for(int j = 0; j<n.length; j++){
+                if(n[i] < n[j]){
+                    tmp = n[i];
+                    n[i] = n[j];
+                    n[j] = tmp;
                 }
             }
-            
         }
-        for(int i:arr){
-            System.out.println(i);
-        }        
-        
-        br.close();
+        for(int i:n){
+            str.append(i+"\n");
+        }
+        System.out.println(str);
     }
 }
